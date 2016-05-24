@@ -24,7 +24,7 @@ var config = {
     app: {
       name: 'comp3670web'
     },
-    port: process.env.PORT || 3000,
+    port: process.env.PORT,
   }
 };
 
