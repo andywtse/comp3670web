@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/task3.css">
+		<link rel="stylesheet" type="text/css" href="./css/nav.css">
+		<title>Lab 2</title>
+		<style type="text/css">
+			h1 {font-size: 120pt;
+				font: Arial;
+				color: blue;}
+			div {height: 300px;
+				 width: 300px;
+				 border:5px solid red;}
+			table {
+				font: verdana;
+				font-style:normal;
+				font-weight: normal;
+				border: 1px;
+				border-style: solid;
+			}
+
+		</style>
+		<script type="text/javascript">
+			sfHover = function() {
+			var sfEls = document.getElementById("navbar").getElementsByTagName("li");
+			for (var i=0; i<sfEls.length; i++) {
+				sfEls[i].onmouseover=function() {
+					this.className+=" hover";
+				}
+				sfEls[i].onmouseout=function() {
+					this.className=this.className.replace(new RegExp(" hover\\b"), "");
+					}
+				}
+			}
+			if (window.attachEvent) window.attachEvent("onload", sfHover);
+		</script>
+	</head>
+
+	<body>
+		<h3>Task 1</h3>
+			<h1 style>Hello!!</h1>
+
+		<br>
+
+		<h3>Task 2</h3>
+			<div></div>
+
+		<br>
+
+		<h3>Task 3 - Part 1</h3>
+			<table>
+				<tbody>
+					<tr class="row1">
+						<td>Cell 1</th>
+						<td>Cell 2</th>
+					</tr>
+					<tr class="row2">
+						<td>Cell 3</th>
+						<td class="lastcell">Cell 4</th>
+					</tr>
+				</tbody>
+			</table>
+
+		<h3>Task 3 - Part 2</h3>
+
+			<ul id="navbar">
+				<li><a href="#">Sublist 1</a>
+					<ul>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Sublist 2</a>
+					<ul>
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Sublist 3</a>
+					<ul>
+						<li><a href="#">Item 1</a></li>
+					</ul>
+				</li>
+			</ul>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
+	</body>
+</html>
