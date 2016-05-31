@@ -80,7 +80,7 @@ p {
                 background: repeating-linear-gradient(-45deg,red,red 5px, white 5px,white 10px);
             }
             #char{
-                background-image: url(charmander.gif);
+                background-image: url(./charmander.gif);
                 height: 250px;
                 width: 300px;
                 border-style: solid;
@@ -103,7 +103,7 @@ p {
             #ten{
                 height:250px;
                 width:300px;
-                background: url(charmander.gif);
+                background: url(./charmander.gif);
                 background: linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1)),url(charmander.gif);
             }
             #eleven{
