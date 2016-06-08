@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//SQ//DTD HTML 2.0 HoTMetaL + extensions//EN">
+<HTML>
+<HEAD>
+<TITLE>Lab 3</TITLE>
+
+<SCRIPT Language="JavaScript">
+    
+    var isValid = 1;
+    var reason="";
+    
+    var array1 = document.getElementsByName('Choice1');
+    var array2 = document.getElementsByName('Choice2');
+    var array3 = document.getElementsByName('Choice3');
+    
+    var check1;
+    var check2;
+    var check3;
+    
+    function CheckChoices(){
+        validateChoices();
+        validateName();
+        validateEmail();
+        
+        if(isValid!=1){
+            alert("Returned false");
+            return false;
+        }
+        
+        
+        return true;
+        
+    }
+
+    function validateChoices(){
+        
+        for(var i=0;i<5;i++){
+            if(array1[i].checked){
+                check1=i;
+            }
+        }
+        for(var i=0;i<5;i++){
+            if(array2[i].checked){
+                check2=i;
+            }
+        }
+        for(var i=0;i<5;i++){
+            if(array3[i].checked){
+                check3=i;
+            }
+        }
+        
+        if(check1==check2||check1==check3||check2==check3){
+            //reason="Choices";
+            isValid=0;
+        }else{
+            isValid=1;
+        }
+    }
+        
+    function validateEmail(){
+        var email = document.getElementById("email");
+    }
+        
+    function validateName(){
+        var name = document.getElementById("name");
+        /*
+        var re = /^[A-Z][a-z]+\s[A-Z][a-z]+/;
+        if(!re.test(name.value)){
+            reason="names";
+            isValid=0;
+        }
+        */
+    }
+
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="#efefef">
+<H2>Please choose three courses in order of preference:</H2>
+<H3>(You must choose different courses for your first second and third choice.)</H3>
+
+<FORM Name = "Courses" onSubmit="return CheckChoices()">
+
+<TABLE>
+<TR>
+<TD ALIGN="RIGHT" COLSTART="1"><B>Course</B></TD>
+<TD ALIGN="CENTER" COLSTART="2"><B>First Choice</B></TD>
+<TD ALIGN="CENTER" COLSTART="3"><B>Second Choice</B></TD>
+<TD ALIGN="CENTER" COLSTART="4"><B>Third Choice</B></TD>
+</TR>
+<TR>
+<TD ALIGN="RIGHT" COLSTART="1">English</TD>
+<TD ALIGN="CENTER" COLSTART="2"><INPUT
+TYPE="RADIO" NAME="Choice1" VALUE="eng" CHECKED="CHECKED"></TD>
+<TD ALIGN="CENTER" COLSTART="3"><INPUT
+TYPE="RADIO" NAME="Choice2" VALUE="eng" ></TD>
+<TD ALIGN="CENTER" COLSTART="4"><INPUT
+TYPE="RADIO" NAME="Choice3" VALUE="eng" ></TD>
+</TR>
+<TR><TD ALIGN="RIGHT" COLSTART="1">French</TD>
+<TD ALIGN="CENTER" COLSTART="2"><INPUT TYPE="RADIO" NAME="Choice1" VALUE="fre"></TD>
+<TD ALIGN="CENTER" COLSTART="3"><INPUT TYPE="RADIO" NAME="Choice2" VALUE="fre" CHECKED="CHECKED"></TD>
+<TD ALIGN="CENTER" COLSTART="4"><INPUT TYPE="RADIO" NAME="Choice3" VALUE="fre"></TD>
+</TR>
+<TR>
+<TD ALIGN="RIGHT" COLSTART="1">Spanish</TD>
+<TD ALIGN="CENTER" COLSTART="2"><INPUT TYPE="RADIO" NAME="Choice1" VALUE="spa"></TD>
+<TD ALIGN="CENTER" COLSTART="3"><INPUT TYPE="RADIO" NAME="Choice2" VALUE="spa"></TD>
+<TD ALIGN="CENTER" COLSTART="4"><INPUT TYPE="RADIO" NAME="Choice3" VALUE="spa" CHECKED="CHECKED"></TD>
+</TR>
+<TR>
+<TD ALIGN="RIGHT" COLSTART="1">Math</TD>
+<TD ALIGN="CENTER" COLSTART="2"><INPUT TYPE="RADIO" NAME="Choice1" VALUE="mat"></TD>
+<TD ALIGN="CENTER" COLSTART="3"><INPUT TYPE="RADIO" NAME="Choice2" VALUE="mat"></TD>
+<TD ALIGN="CENTER" COLSTART="4"><INPUT TYPE="RADIO" NAME="Choice3" VALUE="mat"></TD>
+</TR>
+<TR>
+<TD ALIGN="RIGHT" COLSTART="1">Science</TD>
+<TD ALIGN="CENTER" COLSTART="2"><INPUT TYPE="RADIO" NAME="Choice1" VALUE="sci"></TD>
+<TD ALIGN="CENTER" COLSTART="3"><INPUT TYPE="RADIO" NAME="Choice2" VALUE="sci"></TD>
+<TD ALIGN="CENTER" COLSTART="4"><INPUT TYPE="RADIO" NAME="Choice3" VALUE="sci"></TD>
+</TR>
+
+</TABLE>
+    <br>
+    <!--
+    Name:<input type="text" id="name"> 
+    Email Address:<input type="text" id="email">
+    <br>
+-->
+<P><INPUT TYPE="submit" VALUE="Register" SIZE="20">
+<INPUT TYPE="RESET" VALUE="Reset" SIZE="20"></P>
+    
+    </FORM>
+</BODY></HTML>
