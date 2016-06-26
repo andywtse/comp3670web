@@ -1,0 +1,114 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project Split</title>
+    <css></css>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/tab.css"/>  
+    <link rel="stylesheet" type="text/css" href="./css/placement.css"/>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+             <div class="tabs">
+                <ul>
+                    <li><a href="#stuff">Something</a></li>
+                    <li><a href="#logo">Logo</a></li>
+                </ul>
+                <div class="tabInner">
+                    <div id="stuff">
+                        blah1
+                    </div>
+                    <div id="logo">
+                        Test
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="leftBottom">
+
+            <!--Tabs: Groups and Friends-->
+            <div class="tabs">
+                <ul>
+                    <li><a href="#groups">Groups</a></li>
+                    <li><a href="#friends">Friends</a></li>
+                </ul>
+                <div class="tabInner">
+                    <div id="groups">
+                        blah1
+                    </div>
+                    <div id="friends">
+                        blah2
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+         <!--Tabs: Bill Spliter, Homepage, About--> 
+
+        <div class="tabs" id="bottomRight">
+            <ul>
+                <li><a href="#billsplitter">Bill Splitter</a></li>
+                <li><a href="#homepage">Homepage</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="tabInner">
+                <div id="billsplitter">
+                    <p>Bill Information</p>
+                <label for="billtotal">Bill Total:</label>
+                <input type="number" id="billtotal" step="0.1" value="0.00" placeholder="0.00"/>
+                <br>
+                <br>
+                <label for="tax">Tax: </label>
+                <input type="number" id="tax" step="0.1" value="0.00" placeholder="0.00"/>
+                <br>
+                <br>
+                <label for="billtype">Bill Type:</label>
+                <select id="billtype">
+                    <option value="">Type of Bill</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="utility">Utility</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <br>
+                <label for="tip">Tip Percentage(%):</label>
+                <input type="number" id="tip" placeholder="15"/>
+                <br>
+                <br>
+                <label for="numofpeople">Number of People:</label>
+                <input type="number" id="numofpeople"/>
+                <br>
+                <br>
+                <label for="splitoption">Split Option: </label>
+                <select id="splitoption">
+                    <option value="">Select</option>
+                    <option value="even">Evenly</option>
+                    <option value="percentage">Percentage</option>
+                    <option value="individual">Individuals</option>
+                </select>
+                <br>
+                <br>
+                <p>Final Price: <span>$100.00</span></p>
+                <br>
+                <br>
+                <label for="tax">Tax: </label>
+                <input type="number" id="tax" step="0.1" value="0.00" placeholder="0.00"/>
+                <br>
+                <br>
+                </div>
+                <div id="homepage">
+                    History of payments here
+                </div>
+                <div id="about">
+                    Information about the company here
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

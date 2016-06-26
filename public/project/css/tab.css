@@ -1,0 +1,33 @@
+.tabs ul {
+    list-style: none;
+}
+
+.tabs ul li {
+    float: left;
+    background: #eee;
+    border: 1px #aaa solid;
+    border-bottom: none;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.tabs ul li.active {
+    margin-bottom: -1px;
+    padding-bottom: 6px;
+}
+
+.tabInner {
+    overflow: scroll;
+    clear: both;
+    border: 1px solid #aaa;
+    height: 400px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.tabInner div {
+    overflow: scroll;
+    height: 400px;
+    padding: 10px;
+    
+}
