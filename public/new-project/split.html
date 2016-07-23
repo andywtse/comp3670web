@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Project Split</title>
+    <link rel="stylesheet" type="text/css" href="./css/placement.css"/>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/calculation.js"></script>
+    <style>
+        .tabs li {
+				list-style:none;
+				display:inline;
+			}
+    </style>
+</head>
+<body>
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+    <!---------------------BANNER BLOCK--------------------->
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+        <img id="bannerBlock" src="./banner.png">
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+    <!---------------------MAIN BLOCK----------------------->
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+    <div id="mainBlock">
+        
+        <!------------------------------------------------------>
+        <!----------------------MAIN TABS----------------------->
+        <!------------------------------------------------------>
+        
+        <ul class="tabs">
+            <li><a href="#split-tab">Bill Splitter</a></li>
+            <li><a href="#log-tab">Transaction Log</a></li>
+            <li><a href="#about-tab">About</a></li>
+        </ul>
+        
+        <div id="mainTabBlock">
+            
+            <!------------------------------------------------------>
+            <!------------------------SPLIT------------------------->
+            <!------------------------------------------------------>
+            <div id="split-tab">
+                <p>Bill Information</p>
+                <label for="billtotal">Bill Total:</label>
+                <input type="number" id="billtotal" step="0.1" placeholder="0.00"/>
+                <br>
+                <br>
+                <label for="billtype">Bill Type:</label>
+                <select id="billtype">
+                    <option value="">Type of Bill</option>
+                    <option value="restaurant">Restaurant</option>
+                    <option value="utility">Utility</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+                <br>
+                <label for="tax">Tax: </label>
+                <input type="number" id="tax" step="0.1" placeholder="0.00"/>
+                <br>
+                <br>
+                <label for="tip">Tip Percentage(%):</label>
+                <input type="number" id="tip" placeholder="0"/>
+                <br>
+                <br>
+                <label for="numofpeople">Number of People:</label>
+                <input type="number" id="numofpeople" placeholder="0"/>
+                <br>
+                <br>
+                <label for="splitoption">Split Option: </label>
+                <select id="splitoption">
+                    <option value="">Select</option>
+                    <option value="even">Evenly</option>
+                    <option value="percentage">Percentage</option>
+                    <option value="individual">Individuals</option>
+                </select>
+                <br>
+                <br>
+                <input type="button" id="calculate" value="Calculate">
+                <br>
+                <p>Split Price: <span id="splitprice">$0.00</span></p>
+                <br>
+                <br>
+            </div>
+            <!------------------------------------------------------>
+            <!-------------------------LOG-------------------------->
+            <!------------------------------------------------------>
+            <div id="log-tab">
+                Log of payments here. Require database/php.
+            </div>
+            <!-------------------------------------------------------
+            --------------------------ABOUT--------------------------
+            -------------------------------------------------------->
+            <div id="about-tab">
+                <h1>Split</h1>
+                <h3>by Andy Tse and Pyay</h3>
+                <p>This web application is used to help users "split" the cost of the bills they receive and log the data to keep track of who owes how much to each other.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+    <!----------------------SOCIAL BLOCK-------------------->
+    <!------------------------------------------------------>
+    <!------------------------------------------------------>
+    <div id="socialBlock">
+        <!------------------------------------------------------>
+        <!--------------------SOCIAL TABS----------------------->
+        <!------------------------------------------------------>
+        <ul class="tabs">
+            <li><a href="#group-tab">Groups</a></li>
+            <li><a href="#friend-tab">Friends</a></li>
+        </ul>
+        <div id="socialTabBlock">
+            <!------------------------------------------------------>
+            <!------------------------GROUP------------------------->
+            <!------------------------------------------------------>
+            <div id="group-tab">
+                List of groups from database goes here.
+            </div>
+            <!------------------------------------------------------>
+            <!-----------------------FRIEND------------------------->
+            <!------------------------------------------------------>
+            <div id="friend-tab">
+                List of friends from database goes here.
+            </div>
+        </div>
+    </div>
+    <!-------------------------------------------------------
+    ---------------------------------------------------------
+    ------------------------NEW STUFF HERE-------------------
+    ---------------------------------------------------------
+    -------------------------------------------------------->
+</body>
+</html>
