@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <title>Project Split</title>
     <link rel="stylesheet" type="text/css" href="./css/placement.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/tab.css"/>
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script src="./js/tab.js"></script>
-    <script src="./js/calculation.js"></script>
+    <script src="./js/calculate.js"></script>
     <style>
         .tabs li {
 				list-style:none;
@@ -33,9 +34,9 @@
         <!------------------------------------------------------>
         
         <ul class="tabs">
-            <li><a href="#split-tab">Bill Splitter</a></li>
-            <li><a href="#log-tab">Transaction Log</a></li>
-            <li><a href="#about-tab">About</a></li>
+            <li><a href="#splitTab">Bill Splitter</a></li>
+            <li><a href="#logTab">Transaction Log</a></li>
+            <li><a href="#aboutTab">About</a></li>
         </ul>
         
         <div id="mainTabBlock">
@@ -43,12 +44,14 @@
             <!------------------------------------------------------>
             <!------------------------SPLIT------------------------->
             <!------------------------------------------------------>
-            <div id="split-tab">
+            <div id="splitTab">
                 <p>Bill Information</p>
+                
                 <label for="billtotal">Bill Total:</label>
                 <input type="number" id="billtotal" step="0.1" placeholder="0.00"/>
                 <br>
                 <br>
+                
                 <label for="billtype">Bill Type:</label>
                 <select id="billtype">
                     <option value="">Type of Bill</option>
@@ -58,18 +61,29 @@
                 </select>
                 <br>
                 <br>
-                <label for="tax">Tax: </label>
-                <input type="number" id="tax" step="0.1" placeholder="0.00"/>
-                <br>
-                <br>
-                <label for="tip">Tip Percentage(%):</label>
-                <input type="number" id="tip" placeholder="0"/>
-                <br>
-                <br>
+                
+                <!------------------------------------------------------>
+                <!-------------------------Fee-------------------------->
+                <!------------------------------------------------------>
+                <div id="taxVisible">
+                    <label for="tax">Tax: </label>
+                    <input type="number" id="tax" step="0.1" placeholder="0.00"/>
+                    <br>
+                    <br>
+                </div>
+                
+                <div id="tipVisible">
+                    <label for="tip">Tip Percentage(%):</label>
+                    <input type="number" id="tip" placeholder="0"/>
+                    <br>
+                    <br>
+                </div>
+                
                 <label for="numofpeople">Number of People:</label>
                 <input type="number" id="numofpeople" placeholder="0"/>
                 <br>
                 <br>
+                
                 <label for="splitoption">Split Option: </label>
                 <select id="splitoption">
                     <option value="">Select</option>
@@ -79,7 +93,9 @@
                 </select>
                 <br>
                 <br>
+                
                 <input type="button" id="calculate" value="Calculate">
+                <br>
                 <br>
                 <p>Split Price: <span id="splitprice">$0.00</span></p>
                 <br>
@@ -88,13 +104,13 @@
             <!------------------------------------------------------>
             <!-------------------------LOG-------------------------->
             <!------------------------------------------------------>
-            <div id="log-tab">
+            <div id="logTab">
                 Log of payments here. Require database/php.
             </div>
             <!-------------------------------------------------------
             --------------------------ABOUT--------------------------
             -------------------------------------------------------->
-            <div id="about-tab">
+            <div id="aboutTab">
                 <h1>Split</h1>
                 <h3>by Andy Tse and Pyay</h3>
                 <p>This web application is used to help users "split" the cost of the bills they receive and log the data to keep track of who owes how much to each other.</p>
@@ -112,20 +128,20 @@
         <!--------------------SOCIAL TABS----------------------->
         <!------------------------------------------------------>
         <ul class="tabs">
-            <li><a href="#group-tab">Groups</a></li>
-            <li><a href="#friend-tab">Friends</a></li>
+            <li><a href="#groupTab">Groups</a></li>
+            <li><a href="#friendTab">Friends</a></li>
         </ul>
         <div id="socialTabBlock">
             <!------------------------------------------------------>
             <!------------------------GROUP------------------------->
             <!------------------------------------------------------>
-            <div id="group-tab">
+            <div id="groupTab">
                 List of groups from database goes here.
             </div>
             <!------------------------------------------------------>
             <!-----------------------FRIEND------------------------->
             <!------------------------------------------------------>
-            <div id="friend-tab">
+            <div id="friendTab">
                 List of friends from database goes here.
             </div>
         </div>
